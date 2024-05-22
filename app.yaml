@@ -1,0 +1,39 @@
+runtime: python39  # Specify the runtime, which can be any compatible runtime with the static file serving capabilities.
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /Images
+  static_dir: Images
+
+# Serve index.html as the root of your application
+- url: /
+  static_files: index.html
+  upload: index.html
+
+# Serve the contact_us.html page at the /contact_us URL
+- url: /contact-us
+  static_files: contact_us.html
+  upload: contact_us.html
+
+- url: /privacy-policy
+  static_files: privacy_policy.html
+  upload: privacy_policy.html
+
+- url: /terms-of-service
+  static_files: terms_of_service.html
+  upload: terms_of_service.html
+
+- url: /cancellation-refund
+  static_files: cancellation_refund.html
+  upload: cancellation_refund.html
+
+- url: /shipping-policy
+  static_files: shipping_policy.html
+  upload: shipping_policy.html
+
+# Serve style.css as a static file
+- url: /style.css
+  static_files: style.css
+  upload: style.css
